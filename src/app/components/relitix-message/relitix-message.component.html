@@ -1,0 +1,54 @@
+<h1>Relitix Message To Users</h1>
+
+<div class="card-container">
+    <nz-tabset nzType="card" class="class1">
+        <nz-tab [nzTitle]="'Agent Performance '">
+            <div *ngIf="status==='viewing'">
+                <div class="class2">
+                    <div [innerHTML]="relitixMessage" class="class3"></div>
+                    <div class="class4">
+                        <button class="class5" (click)="edit()">Edit</button>
+                    </div>
+                </div>
+            </div>
+
+            <div *ngIf="status==='editing'">
+                <div class="style1">
+                    <div class="style2">
+                        <angular-editor [(ngModel)]="htmlContent" [config]="config"></angular-editor>
+                    </div>
+                    <div class="style3">
+                        <div class="style4">
+                            <form #myForm="ngForm">
+                                <label class="style5">
+                                    <input type="checkbox" name="agent" [(ngModel)]="performanceTypesTemp.agent"> Agent
+                                    Performance
+                                </label>
+                                <label class="style5">
+                                    <input type="checkbox" name="office" [(ngModel)]="performanceTypesTemp.office">
+                                    Office
+                                    Performance
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="market" [(ngModel)]="performanceTypesTemp.market">
+                                    Market
+                                    Performance
+                                </label>
+                            </form>
+                        </div>
+                        <div>
+                            <button class="style6" (click)="cancel()">Cancel</button>
+                            <button class="style7" (click)="save()">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nz-tab>
+        <nz-tab [nzTitle]="'Office Performance'">
+            <p>Content of Tab Pane</p>
+        </nz-tab>
+        <nz-tab [nzTitle]="'Market Performance '">
+            <p>Content of Tab Pane</p>
+        </nz-tab>
+    </nz-tabset>
+</div>

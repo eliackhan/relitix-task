@@ -1,0 +1,12 @@
+<router-outlet></router-outlet>
+
+<nz-modal [nzVisible]="getUserAgreement()" nzTitle="Relitix Terms of User Agreements" [nzContent]="modalContent"
+    [nzFooter]="modalFooter" (nzOnCancel)="closeOrCancel()">
+    <ng-template #modalContent>
+        <div id="style-3" class="style" [innerHTML]="getText()"></div>
+    </ng-template>
+    <ng-template #modalFooter>
+        <button nz-button nzType="default" class="style2" (click)="closeOrCancel()">Cancel</button>
+        <button nz-button nzType="primary" class="style3" (click)="accept()">Accept</button>
+    </ng-template>
+</nz-modal>

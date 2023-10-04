@@ -1,0 +1,19 @@
+<div class="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center h-screen">
+    <div class="w-[400px] border border-black py-3 h-5/6 flex flex-col bg-white">
+        <div class="flex justify-between border-b  pb-2">
+            <h1 class="ml-3 font-bold">Relitix Terms of User Agreement</h1>
+            <button class="mr-5" (click)="closeOrCancel()">X</button>
+        </div>
+
+        <div id="style-3" class="p-3 overflow-y-auto mr-1 my-3" [innerHTML]="privacyAndPolicy"></div>
+
+        <div class="mt-auto border-t pt-3 flex justify-end mr-3">
+            <button
+                class="py-2.5 px-5 mr-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                (click)="closeOrCancel()">cancel</button>
+            <button type="button"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                (click)="accept()">Accept</button>
+        </div>
+    </div>
+</div>
