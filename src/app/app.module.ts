@@ -19,6 +19,7 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
 import { AgreementDialogComponent } from './components/agreement-dialog/agreement-dialog.component';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { RelitixMessageComponent } from './components/relitix-message/relitix-message.component';
+import { Task2Component } from './task2/task2.component';
 
 registerLocaleData(en);
 
@@ -30,6 +31,7 @@ registerLocaleData(en);
     PrivacyPolicyTabComponent,
     AgreementDialogComponent,
     RelitixMessageComponent,
+    Task2Component,
     
     
     
